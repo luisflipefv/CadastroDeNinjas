@@ -18,10 +18,19 @@ public class NinjaModel {
     @Id
     //essa é a estratégia usada para gerar os números dos IDs
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
+
+    @Column(name = "nome")
     private String nome;
+
     @Column(unique = true)
     private String email;
+
+    @Column(name = "img_url")
+    private String imgUrl;
+
+    @Column(name = "idade")
     private int idade;
 
     //@ManyToOne um ninja tem apenas uma missao
